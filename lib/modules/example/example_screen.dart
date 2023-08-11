@@ -1,3 +1,4 @@
+import 'package:cwi_wiser/theme/theme.g.dart';
 import 'package:cwi_wiser/tokens/colors/wiser_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -52,6 +53,11 @@ class _ExampleScreenState extends State<ExampleScreen>
                   ListView(
                     padding: const EdgeInsets.all(20),
                     children: [
+                      Container(
+                        height: 150,
+                        width: 200,
+                        color: AppColorData.regular().testeColor,
+                      ),
                       Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
