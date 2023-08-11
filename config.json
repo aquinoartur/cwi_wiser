@@ -10,17 +10,17 @@
     {
      "destination": "theme/theme.g.dart",
      "format": "flutter/theme/theme.dart",
-     "prefix": "App"
+     "prefix": "Wiser"
     },
     {
      "destination": "theme/data.g.dart",
      "format": "flutter/theme/data.dart",
-     "prefix": "App"
+     "prefix": "Wiser"
     },
     {
      "destination": "theme/widgets.g.dart",
      "format": "flutter/theme/widgets.dart",
-     "prefix": "App"
+     "prefix": "Wiser"
     }
    ]
   }

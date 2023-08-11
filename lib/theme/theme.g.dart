@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Fri, 11 Aug 2023 01:16:07 GMT
+// Generated on Fri, 11 Aug 2023 01:24:38 GMT
 
 
 
@@ -13,21 +13,21 @@ import 'package:flutter/widgets.dart';
 
 part 'data.g.dart';
 
-class AppTheme extends InheritedWidget {
-    const AppTheme({
+class WiserTheme extends InheritedWidget {
+    const WiserTheme({
       Key? key,
       required this.data,
       required Widget child,
     }) : super(key: key, child: child,);
 
-    final AppThemeData data;
+    final WiserThemeData data;
 
-    static AppThemeData of(BuildContext context) {
-      return context.dependOnInheritedWidgetOfExactType<AppTheme>()?.data ?? AppThemeData.regular();
+    static WiserThemeData of(BuildContext context) {
+      return context.dependOnInheritedWidgetOfExactType<WiserTheme>()?.data ?? WiserThemeData.regular();
     }
 
     @override
-    bool updateShouldNotify(covariant AppTheme oldWidget) {
+    bool updateShouldNotify(covariant WiserTheme oldWidget) {
       return oldWidget.data != data;
     }
 }

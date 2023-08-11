@@ -56,7 +56,12 @@ class _ExampleScreenState extends State<ExampleScreen>
                       Container(
                         height: 150,
                         width: 200,
-                        color: AppColorData.regular().testeColor,
+                        color: WiserColorData.regular().testeColor,
+                      ),
+                      Container(
+                        height: 150,
+                        width: 200,
+                        color: WiserColorData.regular().primaryColor,
                       ),
                       Align(
                         alignment: Alignment.bottomLeft,
