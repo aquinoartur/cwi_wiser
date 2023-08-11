@@ -61,7 +61,7 @@ class _ExampleScreenState extends State<ExampleScreen>
                       Container(
                         height: 150,
                         width: 200,
-                        color: WiserColorData.regular().primaryColor,
+                        color: WiserColorData.regular().rosapink,
                       ),
                       Align(
                         alignment: Alignment.bottomLeft,
