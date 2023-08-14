@@ -130,64 +130,64 @@
     },
     "Heading 1": {
       "value": {
-        "fontFamily": "{$poppins}",
-        "fontWeight": "{$font-weight-bold}",
-        "lineHeight": "{$line-height-100}",
-        "fontSize": "{$font-size-xxx-large}"
+        "fontFamily": "{poppins}",
+        "fontWeight": "{font-weight-bold}",
+        "lineHeight": "{line-height-100}",
+        "fontSize": "{font-size-xxx-large}"
       },
       "type": "typography"
     },
     "Heading 2": {
       "value": {
-        "fontFamily": "{$poppins}",
-        "fontWeight": "{$font-weight-bold}",
-        "lineHeight": "{$line-height-100}",
-        "fontSize": "$$font-size-xxx-large"
+        "fontFamily": "{poppins}",
+        "fontWeight": "{font-weight-bold}",
+        "lineHeight": "{line-height-100}",
+        "fontSize": "$font-size-xxx-large"
       },
       "type": "typography"
     },
     "Heading 3": {
       "value": {
-        "fontFamily": "{$poppins}",
-        "fontWeight": "{$font-weight-bold}",
-        "lineHeight": "{$line-height-100}",
-        "fontSize": "$$font-size-x-large"
+        "fontFamily": "{poppins}",
+        "fontWeight": "{font-weight-bold}",
+        "lineHeight": "{line-height-100}",
+        "fontSize": "$font-size-x-large"
       },
       "type": "typography"
     },
     "Heading 4": {
       "value": {
-        "fontFamily": "{$poppins}",
-        "fontWeight": "{$font-weight-bold}",
-        "lineHeight": "{$line-height-100}",
-        "fontSize": "$$font-size-large"
+        "fontFamily": "{poppins}",
+        "fontWeight": "{font-weight-bold}",
+        "lineHeight": "{line-height-100}",
+        "fontSize": "$font-size-large"
       },
       "type": "typography"
     },
     "Heading 5": {
       "value": {
-        "fontFamily": "{$poppins}",
-        "fontWeight": "$$font-weight-medium",
-        "lineHeight": "{$line-height-100}",
-        "fontSize": "$$font-size-medium"
+        "fontFamily": "{poppins}",
+        "fontWeight": "$font-weight-medium",
+        "lineHeight": "{line-height-100}",
+        "fontSize": "$font-size-medium"
       },
       "type": "typography"
     },
     "Paragraph": {
       "value": {
-        "fontFamily": "{$poppins}",
-        "fontWeight": "$$font-weight-regular",
-        "lineHeight": "$$line-height-140",
-        "fontSize": "$$font-size-medium"
+        "fontFamily": "{poppins}",
+        "fontWeight": "$font-weight-regular",
+        "lineHeight": "$line-height-140",
+        "fontSize": "$font-size-medium"
       },
       "type": "typography"
     },
     "Paragraph-copy": {
       "value": {
-        "fontFamily": "{$poppins}",
-        "fontWeight": "$$font-weight-regular",
-        "lineHeight": "$$line-height-100",
-        "fontSize": "$$font-size-medium"
+        "fontFamily": "{poppins}",
+        "fontWeight": "$font-weight-regular",
+        "lineHeight": "$line-height-100",
+        "fontSize": "$font-size-medium"
       },
       "type": "typography"
     },
