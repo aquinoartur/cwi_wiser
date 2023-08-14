@@ -1,7 +1,8 @@
-import 'package:cwi_wiser/theme/theme.g.dart';
 import 'package:cwi_wiser/tokens/colors/wiser_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../../theme/theme.g.dart';
 
 class ExampleScreen extends StatefulWidget {
   const ExampleScreen({super.key});
