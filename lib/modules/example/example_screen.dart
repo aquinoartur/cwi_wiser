@@ -1,8 +1,7 @@
 import 'package:cwi_wiser/tokens/colors/wiser_colors.dart';
+import 'package:cwi_wiser/tokens/tokens.g.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../../theme/theme.g.dart';
 
 class ExampleScreen extends StatefulWidget {
   const ExampleScreen({super.key});
@@ -57,13 +56,15 @@ class _ExampleScreenState extends State<ExampleScreen>
                       Container(
                         height: 150,
                         width: 200,
-                        color: WiserColorData.regular().testeColor,
+                        color: context.tokens.color.dangerMain,
                       ),
+                      const SizedBox(height: 20),
                       Container(
                         height: 150,
                         width: 200,
-                        color: WiserColorData.regular().rosapink,
+                        color: context.tokens.color.successMain,
                       ),
+                      const SizedBox(height: 20),
                       Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
