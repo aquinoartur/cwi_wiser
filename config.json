@@ -1,6 +1,6 @@
 {
  "source": [
-  "tokens/cwi_tokens.json"
+  "tokens/**/*.json"
  ],
  "platforms": {
   "flutter": {

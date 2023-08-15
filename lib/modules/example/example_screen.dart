@@ -1,5 +1,4 @@
-import 'package:cwi_wiser/tokens/colors/wiser_colors.dart';
-import 'package:cwi_wiser/tokens/tokens.g.dart';
+import 'package:cwi_wiser/design/tokens.g.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -33,11 +32,11 @@ class _ExampleScreenState extends State<ExampleScreen>
         child: Column(
           children: [
             Container(
-              color: WiserColors.neutralShade,
+              color: context.tokens.color.neutralShade,
               child: TabBar(
                 controller: _tabController,
                 indicatorWeight: 3.0,
-                indicatorColor: WiserColors.primaryShade,
+                indicatorColor: context.tokens.color.primaryMain,
                 tabs: const [
                   Tab(height: 40, text: 'Componentes'),
                   Tab(height: 40, text: 'Tokens'),
@@ -57,6 +56,8 @@ class _ExampleScreenState extends State<ExampleScreen>
                         height: 150,
                         width: 200,
                         color: context.tokens.color.dangerMain,
+                        padding: context.tokens.spacing.spacingBig,
+                        child: const Text('Test'),
                       ),
                       const SizedBox(height: 20),
                       Container(

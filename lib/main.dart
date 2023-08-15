@@ -1,8 +1,7 @@
-import 'package:cwi_wiser/tokens/colors/color_helper.dart';
-import 'package:cwi_wiser/tokens/colors/wiser_colors.dart';
-import 'package:cwi_wiser/tokens/tokens.g.dart';
+import 'package:cwi_wiser/design/tokens.g.dart';
 import 'package:flutter/material.dart';
 
+import 'design/theme/wiser_theme.dart';
 import 'modules/splash/splash_screen.dart';
 
 void main() {
@@ -24,13 +23,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-}
-
-class WiserTheme {
-  static DefaultColorTokens colors = DefaultColorTokens();
-
-  static ThemeData defaultTheme = ThemeData(
-    primaryColor: colors.primaryMain,
-    primarySwatch: ColorHelper.setMaterialColor(WiserColors.neutralShade),
-  );
 }

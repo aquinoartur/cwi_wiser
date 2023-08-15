@@ -1,4 +1,4 @@
-import 'package:cwi_wiser/tokens/colors/wiser_colors.dart';
+import 'package:cwi_wiser/design/tokens.g.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -43,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: WiserColors.neutralShade,
+      backgroundColor: context.tokens.color.neutralShade,
       body: Stack(
         children: [
           Center(
