@@ -1,10 +1,11 @@
-import 'package:cwi_wiser/core/tokens.g.dart';
+import 'package:cwi_wiser/tokens/tokens.g.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 import '../example_screen.dart';
 
 class SplashScreen extends StatefulWidget {
+  static const String routeName = '/splash';
   const SplashScreen({super.key});
 
   @override

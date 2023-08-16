@@ -1,10 +1,15 @@
-import 'package:cwi_wiser/core/tokens.g.dart';
+import 'package:cwi_wiser/example/example_screen.dart';
+import 'package:cwi_wiser/tokens/tokens.g.dart';
 import 'package:flutter/material.dart';
 
 import 'core/theme/wiser_theme.dart';
 import 'example/splash/splash_screen.dart';
+import 'example/tokens/screens/colors/colors_screen.dart';
+import 'example/tokens/screens/grids/grid_screen.dart';
+import 'example/tokens/screens/spacing/spacing_screen.dart';
+import 'example/tokens/screens/typography/typography_screen.dart';
 
-void main() {
+void main() async {
   runApp(const WiserDesignSystem());
 }
 
@@ -18,7 +23,20 @@ class WiserDesignSystem extends StatelessWidget {
       child: MaterialApp(
         title: 'Wiser Design System',
         theme: WiserTheme.defaultTheme,
-        home: const SplashScreen(),
+        initialRoute: SplashScreen.routeName,
+        routes: <String, WidgetBuilder>{
+          SplashScreen.routeName: (BuildContext context) =>
+              const SplashScreen(),
+          ExampleScreen.routeName: (BuildContext context) =>
+              const ExampleScreen(),
+          ColorsScreen.routeName: (BuildContext context) =>
+              const ColorsScreen(),
+          TypographyScreen.routeName: (BuildContext context) =>
+              const TypographyScreen(),
+          SpacingScreen.routeName: (BuildContext context) =>
+              const SpacingScreen(),
+          GridScreen.routeName: (BuildContext context) => const GridScreen(),
+        },
       ),
     );
   }
