@@ -1,4 +1,5 @@
-import 'package:cwi_wiser/design/tokens.g.dart';
+import 'package:cwi_wiser/core/extension/spacing_extension.dart';
+import 'package:cwi_wiser/core/tokens.g.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -56,8 +57,7 @@ class _ExampleScreenState extends State<ExampleScreen>
                         height: 150,
                         width: 200,
                         color: context.tokens.color.dangerMain,
-                        padding: context.tokens.spacing.spacingBig,
-                        child: const Text('Test'),
+                        padding: context.tokens.spacing.spacingBig.v,
                       ),
                       const SizedBox(height: 20),
                       Container(

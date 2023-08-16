@@ -1,23 +1,22 @@
-import 'package:cwi_wiser/design/tokens.g.dart';
+import 'package:cwi_wiser/core/tokens.g.dart';
 import 'package:flutter/material.dart';
 
-import 'design/theme/wiser_theme.dart';
-import 'modules/splash/splash_screen.dart';
+import 'core/theme/wiser_theme.dart';
+import 'example/splash/splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const WiserDesignSystem());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class WiserDesignSystem extends StatelessWidget {
+  const WiserDesignSystem({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Tokens(
       tokens: DefaultTokens(),
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Wiser Design System',
         theme: WiserTheme.defaultTheme,
         home: const SplashScreen(),
       ),

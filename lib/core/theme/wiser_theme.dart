@@ -1,5 +1,5 @@
-import 'package:cwi_wiser/design/colors/color_helper.dart';
-import 'package:cwi_wiser/design/tokens.g.dart';
+import 'package:cwi_wiser/core/helper/color_helper.dart';
+import 'package:cwi_wiser/core/tokens.g.dart';
 import 'package:flutter/material.dart';
 
 class WiserTheme {

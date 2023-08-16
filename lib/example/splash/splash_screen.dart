@@ -1,8 +1,8 @@
-import 'package:cwi_wiser/design/tokens.g.dart';
+import 'package:cwi_wiser/core/tokens.g.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import '../example/example_screen.dart';
+import '../example_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -23,16 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
             PageRouteBuilder(
               transitionDuration: const Duration(milliseconds: 500),
               pageBuilder: (context, _, __) => const ExampleScreen(),
-              transitionsBuilder: (_, animation, __, child) {
-                final tween =
-                    Tween(begin: const Offset(0.0, 1.0), end: Offset.zero) //
-                        .chain(CurveTween(curve: Curves.easeIn));
-
-                return SlideTransition(
-                  position: animation.drive(tween),
-                  child: child,
-                );
-              },
+              transitionsBuilder: transitionsBuilder,
             ),
           ),
         );
@@ -69,4 +60,15 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
+
+  Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)
+      transitionsBuilder = (_, animation, __, child) {
+    final tween = Tween(begin: const Offset(0.0, 1.0), end: Offset.zero) //
+        .chain(CurveTween(curve: Curves.easeIn));
+
+    return SlideTransition(
+      position: animation.drive(tween),
+      child: child,
+    );
+  };
 }
