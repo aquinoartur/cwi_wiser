@@ -4,7 +4,7 @@ import 'package:cwi_wiser/example/tokens/screens/typography/typography_screen.da
 import 'package:cwi_wiser/example/tokens/widgets/tile_card.dart';
 import 'package:flutter/material.dart';
 
-import 'grids/grid_screen.dart';
+
 
 class TokensScreen extends StatelessWidget {
   const TokensScreen({super.key});
@@ -34,13 +34,6 @@ class TokensScreen extends StatelessWidget {
           onTap: () => Navigator.pushNamed(
             context,
             SpacingScreen.routeName,
-          ),
-        ),
-        TileCard(
-          title: 'Grades',
-          onTap: () => Navigator.pushNamed(
-            context,
-            GridScreen.routeName,
           ),
         ),
       ],

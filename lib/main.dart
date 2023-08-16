@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'core/theme/wiser_theme.dart';
 import 'example/splash/splash_screen.dart';
 import 'example/tokens/screens/colors/colors_screen.dart';
-import 'example/tokens/screens/grids/grid_screen.dart';
 import 'example/tokens/screens/spacing/spacing_screen.dart';
 import 'example/tokens/screens/typography/typography_screen.dart';
 
@@ -35,7 +34,6 @@ class WiserDesignSystem extends StatelessWidget {
               const TypographyScreen(),
           SpacingScreen.routeName: (BuildContext context) =>
               const SpacingScreen(),
-          GridScreen.routeName: (BuildContext context) => const GridScreen(),
         },
       ),
     );

@@ -3,6 +3,7 @@ import 'package:cwi_wiser/tokens/tokens.g.dart';
 import 'package:flutter/material.dart';
 
 import 'atoms/atoms_screen.dart';
+import 'molecules/molecules_screen.dart';
 
 class ExampleScreen extends StatefulWidget {
   static const String routeName = '/example';
@@ -56,7 +57,7 @@ class _ExampleScreenState extends State<ExampleScreen>
                   // TAB 1
                   AtomsScreen(),
                   // TAB 2
-                  SizedBox.expand(),
+                  MoleculesScreen(),
                   // TAB 3
                   SizedBox.expand(),
                   // TAB 4

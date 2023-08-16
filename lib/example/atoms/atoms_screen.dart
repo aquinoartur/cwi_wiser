@@ -1,6 +1,6 @@
+import 'package:cwi_wiser/example/tokens/widgets/text_header.dart';
+import 'package:cwi_wiser/tokens/tokens.g.dart';
 import 'package:flutter/material.dart';
-
-import 'package:google_fonts/google_fonts.dart';
 
 class AtomsScreen extends StatelessWidget {
   const AtomsScreen({super.key});
@@ -8,20 +8,13 @@ class AtomsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: const EdgeInsets.all(20),
+      shrinkWrap: true,
+      padding: context.tokens.spacing.spacingBig,
       children: [
+        const TextHeader(text: 'Exemplos'),
         const SizedBox(height: 20),
-        Align(
-          alignment: Alignment.bottomLeft,
-          child: Text(
-            'Átomos',
-            style: GoogleFonts.poppins(
-              fontSize: 24,
-            ),
-          ),
-        ),
         SizedBox(
-          height: MediaQuery.of(context).size.height * .25,
+          height: MediaQuery.of(context).size.height * .5,
           child: GridView(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
@@ -48,28 +41,6 @@ class AtomsScreen extends StatelessWidget {
               ),
             ],
           ),
-        ),
-        const SizedBox(height: 20),
-        Align(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Moléculas',
-            style: GoogleFonts.poppins(
-              fontSize: 24,
-            ),
-          ),
-        ),
-        ElevatedButton(
-          onPressed: () {},
-          child: const Text('Dialog'),
-        ),
-        ElevatedButton(
-          onPressed: () {},
-          child: const Text('Slider'),
-        ),
-        ElevatedButton(
-          onPressed: () {},
-          child: const Text('Stepper'),
         ),
       ],
     );

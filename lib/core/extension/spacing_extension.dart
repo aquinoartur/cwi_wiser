@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 extension SpacingExtension on EdgeInsets {
-  double get unit => vertical;
+  double get value => top;
+  String get str => value.toString();
 
-  EdgeInsets get v => EdgeInsets.symmetric(vertical: unit);
-  EdgeInsets get h => EdgeInsets.symmetric(horizontal: unit);
-  EdgeInsets get b => EdgeInsets.only(bottom: unit);
-  EdgeInsets get r => EdgeInsets.only(right: unit);
-  EdgeInsets get l => EdgeInsets.only(left: unit);
-  EdgeInsets get t => EdgeInsets.only(top: unit);
+  EdgeInsets get v => EdgeInsets.symmetric(vertical: value);
+  EdgeInsets get h => EdgeInsets.symmetric(horizontal: value);
+  EdgeInsets get b => EdgeInsets.only(bottom: value);
+  EdgeInsets get r => EdgeInsets.only(right: value);
+  EdgeInsets get l => EdgeInsets.only(left: value);
+  EdgeInsets get t => EdgeInsets.only(top: value);
 }
