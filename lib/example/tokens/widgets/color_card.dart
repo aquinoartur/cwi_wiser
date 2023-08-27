@@ -1,21 +1,18 @@
+import 'package:cwi_wiser/core/helper/color_helper.dart';
 import 'package:cwi_wiser/core/theme/wiser_theme.dart';
 import 'package:wiser/tokens/tokens.g.dart';
 import 'package:flutter/material.dart';
 
 class ColorCard extends StatelessWidget {
   final Color color;
-  final String token;
-  final String variable;
-  final String value;
   final String group;
+  final String token;
 
   const ColorCard({
     Key? key,
     required this.color,
-    required this.token,
-    required this.value,
-    required this.variable,
     required this.group,
+     this.token = '',
   }) : super(key: key);
 
   @override
@@ -46,8 +43,7 @@ class ColorCard extends StatelessWidget {
               children: [
                 labelText(label: 'Group', value: group.toUpperCase()),
                 labelText(label: 'Token', value: token),
-                labelText(label: 'Var', value: variable),
-                labelText(label: 'Value', value: value),
+                labelText(label: 'Value', value: color.toHex()),
               ],
             ),
           ],
