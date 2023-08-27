@@ -1,5 +1,5 @@
-import 'package:cwi_wiser/core/extension/spacing_extension.dart';
-import 'package:cwi_wiser/tokens/tokens.g.dart';
+import 'package:wiser/extension/spacing_extension.dart';
+import 'package:wiser/tokens/tokens.g.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

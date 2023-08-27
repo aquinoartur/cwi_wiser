@@ -1,5 +1,5 @@
 import 'package:cwi_wiser/example/tokens/screens/tokens_screen.dart';
-import 'package:cwi_wiser/tokens/tokens.g.dart';
+import 'package:wiser/tokens/tokens.g.dart';
 import 'package:flutter/material.dart';
 
 import 'atoms/atoms_screen.dart';

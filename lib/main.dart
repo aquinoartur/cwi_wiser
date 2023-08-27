@@ -1,8 +1,9 @@
 import 'package:cwi_wiser/example/example_screen.dart';
-import 'package:cwi_wiser/tokens/tokens.g.dart';
 import 'package:flutter/material.dart';
+import 'package:wiser/tokens/tokens.g.dart';
 
 import 'core/theme/wiser_theme.dart';
+import 'example/atoms/screens/buttons_screen.dart';
 import 'example/splash/splash_screen.dart';
 import 'example/tokens/screens/colors/colors_screen.dart';
 import 'example/tokens/screens/spacing/spacing_screen.dart';
@@ -34,6 +35,8 @@ class WiserDesignSystem extends StatelessWidget {
               const TypographyScreen(),
           SpacingScreen.routeName: (BuildContext context) =>
               const SpacingScreen(),
+          ButtonScreen.routeName: (BuildContext context) =>
+              const ButtonScreen(),
         },
       ),
     );

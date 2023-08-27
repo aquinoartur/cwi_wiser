@@ -1,4 +1,4 @@
-import 'package:cwi_wiser/tokens/tokens.g.dart';
+import 'package:wiser/tokens/tokens.g.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 

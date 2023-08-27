@@ -110,7 +110,6 @@ class DefaultColorTokens extends ColorTokens {
   Color get dangerTint => const Color(0xFFF87171);
 }
 
-
 class DefaultSpacingTokens extends SpacingTokens {
   @override
   EdgeInsets get spacingXxSmall => const EdgeInsets.all(4.0);
@@ -146,55 +145,54 @@ class DefaultSpacingTokens extends SpacingTokens {
   EdgeInsets get spacingXxxHuge => const EdgeInsets.all(144.0);
 }
 
-
 class DefaultTextStyleTokens extends TextStyleTokens {
   @override
   TextStyle get heading1 => const TextStyle(
-  fontFamily: 'Poppins',
-  fontSize: 40.0,
-  fontWeight: FontWeight.w700,
-  height: 1.0,
-);
+        fontFamily: 'Poppins',
+        fontSize: 40.0,
+        fontWeight: FontWeight.w700,
+        height: 1.0,
+      );
   @override
   TextStyle get heading2 => const TextStyle(
-  fontFamily: 'Poppins',
-  fontSize: 40.0,
-  fontWeight: FontWeight.w700,
-  height: 1.0,
-);
+        fontFamily: 'Poppins',
+        fontSize: 40.0,
+        fontWeight: FontWeight.w700,
+        height: 1.0,
+      );
   @override
   TextStyle get heading3 => const TextStyle(
-  fontFamily: 'Poppins',
-  fontSize: 24.0,
-  fontWeight: FontWeight.w700,
-  height: 1.0,
-);
+        fontFamily: 'Poppins',
+        fontSize: 24.0,
+        fontWeight: FontWeight.w700,
+        height: 1.0,
+      );
   @override
   TextStyle get heading4 => const TextStyle(
-  fontFamily: 'Poppins',
-  fontSize: 20.0,
-  fontWeight: FontWeight.w700,
-  height: 1.0,
-);
+        fontFamily: 'Poppins',
+        fontSize: 20.0,
+        fontWeight: FontWeight.w700,
+        height: 1.0,
+      );
   @override
   TextStyle get heading5 => const TextStyle(
-  fontFamily: 'Poppins',
-  fontSize: 16.0,
-  fontWeight: FontWeight.w500,
-  height: 1.0,
-);
+        fontFamily: 'Poppins',
+        fontSize: 16.0,
+        fontWeight: FontWeight.w500,
+        height: 1.0,
+      );
   @override
   TextStyle get paragraph => const TextStyle(
-  fontFamily: 'Poppins',
-  fontSize: 16.0,
-  fontWeight: FontWeight.w400,
-  height: 1.4,
-);
+        fontFamily: 'Poppins',
+        fontSize: 16.0,
+        fontWeight: FontWeight.w400,
+        height: 1.4,
+      );
   @override
   TextStyle get paragraphCopy => const TextStyle(
-  fontFamily: 'Poppins',
-  fontSize: 16.0,
-  fontWeight: FontWeight.w400,
-  height: 1.0,
-);
+        fontFamily: 'Poppins',
+        fontSize: 16.0,
+        fontWeight: FontWeight.w400,
+        height: 1.0,
+      );
 }

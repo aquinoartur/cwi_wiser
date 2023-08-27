@@ -1,5 +1,5 @@
 import 'package:cwi_wiser/core/theme/wiser_theme.dart';
-import 'package:cwi_wiser/tokens/tokens.g.dart';
+import 'package:wiser/tokens/tokens.g.dart';
 import 'package:flutter/material.dart';
 
 class ColorCard extends StatelessWidget {
