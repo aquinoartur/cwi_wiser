@@ -4,6 +4,7 @@ import 'package:wiser/tokens/tokens.g.dart';
 
 import 'core/theme/wiser_theme.dart';
 import 'example/atoms/screens/buttons_screen.dart';
+import 'example/login/login_screen.dart';
 import 'example/splash/splash_screen.dart';
 import 'example/tokens/screens/colors/colors_screen.dart';
 import 'example/tokens/screens/spacing/spacing_screen.dart';
@@ -27,6 +28,7 @@ class WiserDesignSystem extends StatelessWidget {
         routes: <String, WidgetBuilder>{
           SplashScreen.routeName: (BuildContext context) =>
               const SplashScreen(),
+          LoginScreen.routeName: (BuildContext context) => const LoginScreen(),
           ExampleScreen.routeName: (BuildContext context) =>
               const ExampleScreen(),
           ColorsScreen.routeName: (BuildContext context) =>
