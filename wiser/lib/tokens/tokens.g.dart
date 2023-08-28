@@ -13,13 +13,14 @@ abstract class ITokens {
   ColorTokens get color;
   SpacingTokens get spacing;
   TextStyleTokens get textStyle;
+  ShadowTokens get shadow;
 }
 
 abstract class ColorTokens {
   Color get neutralShade;
   Color get neutralMain;
   Color get neutralTint;
-  Color get neutralConcrete;
+  Color get neutralXtint;
   Color get primaryShade;
   Color get primaryMain;
   Color get primaryTint;
@@ -64,6 +65,11 @@ abstract class TextStyleTokens {
   TextStyle get paragraphCopy;
 }
 
+abstract class ShadowTokens {
+  List<BoxShadow> get shadowDefault;
+  List<BoxShadow> get shadowElevated;
+}
+
 class DefaultTokens extends ITokens {
   @override
   ColorTokens get color => DefaultColorTokens();
@@ -71,6 +77,8 @@ class DefaultTokens extends ITokens {
   SpacingTokens get spacing => DefaultSpacingTokens();
   @override
   TextStyleTokens get textStyle => DefaultTextStyleTokens();
+  @override
+  ShadowTokens get shadow => DefaultShadowTokens();
 }
 
 class DefaultColorTokens extends ColorTokens {
@@ -81,7 +89,7 @@ class DefaultColorTokens extends ColorTokens {
   @override
   Color get neutralTint => const Color(0xFFCCCACA);
   @override
-  Color get neutralConcrete => const Color(0xFFF2F2F2);
+  Color get neutralXtint => const Color(0xFFF2F2F2);
   @override
   Color get primaryShade => const Color(0xFFEA8D00);
   @override
@@ -109,6 +117,7 @@ class DefaultColorTokens extends ColorTokens {
   @override
   Color get dangerTint => const Color(0xFFF87171);
 }
+
 
 class DefaultSpacingTokens extends SpacingTokens {
   @override
@@ -145,54 +154,77 @@ class DefaultSpacingTokens extends SpacingTokens {
   EdgeInsets get spacingXxxHuge => const EdgeInsets.all(144.0);
 }
 
+
 class DefaultTextStyleTokens extends TextStyleTokens {
   @override
   TextStyle get heading1 => const TextStyle(
-        fontFamily: 'Poppins',
-        fontSize: 40.0,
-        fontWeight: FontWeight.w700,
-        height: 1.0,
-      );
+  fontFamily: 'Poppins',
+  fontSize: 40.0,
+  fontWeight: FontWeight.w700,
+  height: 1.0,
+);
   @override
   TextStyle get heading2 => const TextStyle(
-        fontFamily: 'Poppins',
-        fontSize: 40.0,
-        fontWeight: FontWeight.w700,
-        height: 1.0,
-      );
+  fontFamily: 'Poppins',
+  fontSize: 40.0,
+  fontWeight: FontWeight.w700,
+  height: 1.0,
+);
   @override
   TextStyle get heading3 => const TextStyle(
-        fontFamily: 'Poppins',
-        fontSize: 24.0,
-        fontWeight: FontWeight.w700,
-        height: 1.0,
-      );
+  fontFamily: 'Poppins',
+  fontSize: 24.0,
+  fontWeight: FontWeight.w700,
+  height: 1.0,
+);
   @override
   TextStyle get heading4 => const TextStyle(
-        fontFamily: 'Poppins',
-        fontSize: 20.0,
-        fontWeight: FontWeight.w700,
-        height: 1.0,
-      );
+  fontFamily: 'Poppins',
+  fontSize: 20.0,
+  fontWeight: FontWeight.w700,
+  height: 1.0,
+);
   @override
   TextStyle get heading5 => const TextStyle(
-        fontFamily: 'Poppins',
-        fontSize: 16.0,
-        fontWeight: FontWeight.w500,
-        height: 1.0,
-      );
+  fontFamily: 'Poppins',
+  fontSize: 16.0,
+  fontWeight: FontWeight.w500,
+  height: 1.0,
+);
   @override
   TextStyle get paragraph => const TextStyle(
-        fontFamily: 'Poppins',
-        fontSize: 16.0,
-        fontWeight: FontWeight.w400,
-        height: 1.4,
-      );
+  fontFamily: 'Poppins',
+  fontSize: 16.0,
+  fontWeight: FontWeight.w400,
+  height: 1.4,
+);
   @override
   TextStyle get paragraphCopy => const TextStyle(
-        fontFamily: 'Poppins',
-        fontSize: 16.0,
-        fontWeight: FontWeight.w400,
-        height: 1.0,
-      );
+  fontFamily: 'Poppins',
+  fontSize: 16.0,
+  fontWeight: FontWeight.w400,
+  height: 1.0,
+);
+}
+
+
+class DefaultShadowTokens extends ShadowTokens {
+  @override
+  List<BoxShadow> get shadowDefault => const [
+  BoxShadow(
+    offset: Offset(0.0, 1.0),
+    blurRadius: 3.0,
+    spreadRadius: 0.0,
+    color: Color(0x33000000),
+  ),
+];
+  @override
+  List<BoxShadow> get shadowElevated => const [
+  BoxShadow(
+    offset: Offset(0.0, 8.0),
+    blurRadius: 20.0,
+    spreadRadius: 0.0,
+    color: Color(0x29000000),
+  ),
+];
 }

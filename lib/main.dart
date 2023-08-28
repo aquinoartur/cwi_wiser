@@ -4,6 +4,7 @@ import 'package:wiser/tokens/tokens.g.dart';
 
 import 'core/theme/wiser_theme.dart';
 import 'example/atoms/screens/buttons_screen.dart';
+import 'example/atoms/screens/toogle_screen.dart';
 import 'example/login/login_screen.dart';
 import 'example/splash/splash_screen.dart';
 import 'example/tokens/screens/colors/colors_screen.dart';
@@ -39,6 +40,8 @@ class WiserDesignSystem extends StatelessWidget {
               const SpacingScreen(),
           ButtonScreen.routeName: (BuildContext context) =>
               const ButtonScreen(),
+          ToogleScreen.routeName: (BuildContext context) =>
+              const ToogleScreen(),
         },
       ),
     );

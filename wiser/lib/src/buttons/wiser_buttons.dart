@@ -28,7 +28,7 @@ class WiserButton extends StatelessWidget {
     this.height,
   })  : buttonColor = CustomTokens.colors.primaryMain,
         labelColor = CustomTokens.colors.neutralShade,
-        spinnerColor = CustomTokens.colors.neutralConcrete,
+        spinnerColor = CustomTokens.colors.neutralXtint,
         super(key: key);
 
   WiserButton.solidSecondary({
@@ -43,7 +43,7 @@ class WiserButton extends StatelessWidget {
     this.height,
   })  : buttonColor = CustomTokens.colors.neutralShade,
         labelColor = CustomTokens.colors.primaryMain,
-        spinnerColor = CustomTokens.colors.neutralConcrete,
+        spinnerColor = CustomTokens.colors.neutralXtint,
         super(key: key);
 
   WiserButton.solidTertiary({
@@ -105,8 +105,9 @@ class WiserButton extends StatelessWidget {
                       Text(
                         label,
                         textAlign: TextAlign.center,
-                        style: CustomTokens.text.paragraph
-                            .copyWith(color: labelColor),
+                        style: CustomTokens.text.paragraph.copyWith(
+                          color: labelColor,
+                        ),
                       ),
                       if (withIcon) ...{
                         SizedBox(

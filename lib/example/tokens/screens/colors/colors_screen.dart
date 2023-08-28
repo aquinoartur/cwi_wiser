@@ -41,7 +41,7 @@ class ColorsScreen extends StatelessWidget {
             token: r'$neutral-tint',
           ),
           ColorCard(
-            color: context.tokens.color.neutralConcrete,
+            color: context.tokens.color.neutralXtint,
             group: ColorsGroup.neutral.name,
             token: r'$neutral-xtint',
           ),
