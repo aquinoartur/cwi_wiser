@@ -1,21 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:wiser/tokens/tokens.g.dart';
 
-class WiserToogle extends StatefulWidget {
+class WiserToggle extends StatefulWidget {
   final bool initialValue;
   final Function(bool)? onChanged;
 
-  const WiserToogle({
+  const WiserToggle({
     Key? key,
     required this.initialValue,
     this.onChanged,
   }) : super(key: key);
 
   @override
-  State<WiserToogle> createState() => _WiserToogleState();
+  State<WiserToggle> createState() => _WiserToggleState();
 }
 
-class _WiserToogleState extends State<WiserToogle> {
+class _WiserToggleState extends State<WiserToggle> {
   late final ValueNotifier<bool> isSelected;
 
   @override
@@ -35,21 +35,26 @@ class _WiserToogleState extends State<WiserToogle> {
     return ValueListenableBuilder<bool>(
       valueListenable: isSelected,
       builder: (context, value, _) {
-        return CupertinoSwitch(
-          value: value,
-          activeColor: value
-              ? context.tokens.color.primaryXtint
-              : context.tokens.color.neutralXtint,
-          thumbColor: value
-              ? context.tokens.color.primaryMain
-              : context.tokens.color.neutralTint,
-          trackColor: value
-              ? context.tokens.color.primaryXtint
-              : context.tokens.color.neutralXtint,
-          onChanged: (v) {
-            isSelected.value = v;
-            widget.onChanged?.call(value);
-          },
+        return Semantics(
+          tooltip: 'Clique para alterar o valor da chave',
+          enabled: true,
+          toggled: value,
+          child: CupertinoSwitch(
+            value: value,
+            activeColor: value
+                ? context.tokens.color.primaryXtint
+                : context.tokens.color.neutralXtint,
+            thumbColor: value
+                ? context.tokens.color.primaryMain
+                : context.tokens.color.neutralTint,
+            trackColor: value
+                ? context.tokens.color.primaryXtint
+                : context.tokens.color.neutralXtint,
+            onChanged: (v) {
+              isSelected.value = v;
+              widget.onChanged?.call(value);
+            },
+          ),
         );
       },
     );

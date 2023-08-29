@@ -1,3 +1,4 @@
+import 'package:cwi_wiser/core/theme/wiser_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:wiser/wiser.dart';
 
@@ -18,17 +19,17 @@ class ToogleScreen extends StatelessWidget {
           padding: context.tokens.spacing.spacingBig,
           child: Column(
             children: [
-              WiserToogle(
+              WiserToggle(
                 initialValue: false,
-                onChanged: (p0) {},
+                onChanged: (value) {},
               ),
-              WiserToogle(
+              WiserToggle(
                 initialValue: true,
-                onChanged: (p0) {},
+                onChanged: (value) {},
               ),
               WiserChecBoxListTile(
                 currentValue: false,
-                onChanged: (p0) {},
+                onChanged: (value) {},
                 title: 'Label text',
               ),
             ],

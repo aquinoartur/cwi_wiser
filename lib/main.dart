@@ -24,7 +24,7 @@ class WiserDesignSystem extends StatelessWidget {
       tokens: DefaultTokens(),
       child: MaterialApp(
         title: 'Wiser Design System',
-        theme: WiserTheme.defaultTheme,
+        theme: Wiser.defaultTheme,
         initialRoute: SplashScreen.routeName,
         routes: <String, WidgetBuilder>{
           SplashScreen.routeName: (BuildContext context) =>

@@ -2,10 +2,10 @@ import 'package:cwi_wiser/core/helper/color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:wiser/tokens/tokens.g.dart';
 
-class WiserTheme {
-  WiserTheme._();
+class Wiser {
+  Wiser._();
 
-  static final WiserTheme instance = WiserTheme._();
+  static final Wiser instance = Wiser._();
 
   static DefaultColorTokens colors = DefaultColorTokens();
   static DefaultSpacingTokens spacing = DefaultSpacingTokens();

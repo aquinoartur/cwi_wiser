@@ -12,7 +12,7 @@ class ColorCard extends StatelessWidget {
     Key? key,
     required this.color,
     required this.group,
-     this.token = '',
+    this.token = '',
   }) : super(key: key);
 
   @override
@@ -54,7 +54,7 @@ class ColorCard extends StatelessWidget {
 
   Widget labelText({required String label, required String value}) {
     return Padding(
-      padding: WiserTheme.spacing.spacingXxSmall,
+      padding: Wiser.spacing.spacingXxSmall,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
