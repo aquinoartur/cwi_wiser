@@ -1,5 +1,7 @@
 import 'package:cwi_wiser/example/atoms/screens/buttons_screen.dart';
-import 'package:cwi_wiser/example/atoms/screens/toogle_screen.dart';
+import 'package:cwi_wiser/example/atoms/screens/checkbox_screen.dart';
+import 'package:cwi_wiser/example/atoms/screens/fields_screen.dart';
+import 'package:cwi_wiser/example/atoms/screens/toggle_screen.dart';
 import 'package:cwi_wiser/example/tokens/widgets/text_header.dart';
 import 'package:wiser/tokens/tokens.g.dart';
 import 'package:flutter/material.dart';
@@ -39,14 +41,28 @@ class AtomsScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {},
+                child: const Text('Pills'),
+              ),
+              ElevatedButton(
+                onPressed: () => Navigator.pushNamed(
+                  context,
+                  CheckboxScreen.routeName,
+                ),
                 child: const Text('Checkbox'),
               ),
               ElevatedButton(
                 onPressed: () => Navigator.pushNamed(
                   context,
-                  ToogleScreen.routeName,
+                  ToggleScreen.routeName,
                 ),
-                child: const Text('Toogle'),
+                child: const Text('Toggle'),
+              ),
+              ElevatedButton(
+                onPressed: () => Navigator.pushNamed(
+                  context,
+                  FieldsScreen.routeName,
+                ),
+                child: const Text('Fields'),
               ),
             ],
           ),

@@ -1,18 +1,15 @@
 import 'package:cwi_wiser/core/helper/color_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:wiser/tokens/tokens.g.dart';
+import 'package:wiser/tokens/tokens.dart';
 
 class Wiser {
   Wiser._();
 
   static final Wiser instance = Wiser._();
 
-  static DefaultColorTokens colors = DefaultColorTokens();
-  static DefaultSpacingTokens spacing = DefaultSpacingTokens();
-
   static ThemeData defaultTheme = ThemeData(
-    primaryColor: colors.neutralShade,
-    primarySwatch: ColorHelper.setMaterialColor(colors.neutralShade),
+    primaryColor: WiserTokens.colors.neutralShade,
+    primarySwatch: ColorHelper.setMaterialColor(WiserTokens.colors.neutralShade),
     tabBarTheme: const TabBarTheme(
       labelStyle: TextStyle(
         fontSize: 12.5,

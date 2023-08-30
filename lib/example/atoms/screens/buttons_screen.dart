@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:wiser/wiser.dart';
 
-class ButtonScreen extends StatelessWidget {
+class ButtonScreen extends StatefulWidget {
   static const String routeName = '/buttons';
   const ButtonScreen({super.key});
 
+  @override
+  State<ButtonScreen> createState() => _ButtonScreenState();
+}
+
+class _ButtonScreenState extends State<ButtonScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,24 +23,69 @@ class ButtonScreen extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              WiserButton.solidPrimary(
+              WiserSolidButton.primary(
                 label: 'Texto do botão',
-                onPressed: () {},
+                icon: Icons.check,
+                onPressed: showSnack,
               ),
               const SizedBox(height: 20),
-              WiserButton.solidSecondary(
+              WiserSolidButton.secondary(
                 label: 'Texto do botão',
-                onPressed: () {},
+                icon: Icons.chevron_right,
+                onPressed: showSnack,
               ),
               const SizedBox(height: 20),
-              WiserButton.solidTertiary(
+              WiserSolidButton.tertiary(
                 label: 'Texto do botão',
-                withIcon: false,
+                onPressed: showSnack,
+              ),
+              const SizedBox(height: 20),
+              const Divider(),
+              const SizedBox(height: 20),
+              WiserTextButton.primary(
+                label: 'Texto do botão',
+                onPressed: showSnack,
+              ),
+              const SizedBox(height: 10),
+              WiserTextButton.secondary(
+                label: 'Texto do botão',
+                onPressed: showSnack,
+              ),
+              const SizedBox(height: 10),
+              WiserTextButton.tertiary(
+                label: 'Texto do botão',
+                onPressed: showSnack,
+              ),
+              const SizedBox(height: 20),
+              const Divider(),
+              const SizedBox(height: 20),
+              WiserUnderlineButton(
+                label: 'Texto do botão',
+                labelColor: context.tokens.color.dangerMain,
                 onPressed: () {},
+              ),
+              WiserUnderlineButton(
+                label: 'Texto do botão',
+                labelColor: context.tokens.color.successMain,
+                onPressed: showSnack,
+              ),
+              WiserUnderlineButton(
+                label: 'Texto do botão',
+                labelColor: context.tokens.color.warningTint,
+                onPressed: showSnack,
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  void showSnack() {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Você clicou'),
+        duration: kThemeAnimationDuration,
       ),
     );
   }

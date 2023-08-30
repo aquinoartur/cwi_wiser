@@ -2,15 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:wiser/wiser.dart';
 
 class WiserChecBoxListTile extends StatefulWidget {
-  final bool currentValue;
+  final bool? currentValue;
   final Function(bool?) onChanged;
   final String? title;
+  final bool compact;
+  final bool triState;
 
   const WiserChecBoxListTile({
     Key? key,
     required this.currentValue,
     required this.onChanged,
     this.title,
+    this.compact = true,
+    this.triState = true,
   }) : super(key: key);
 
   @override
@@ -38,7 +42,7 @@ class _WiserChecBoxListTileState extends State<WiserChecBoxListTile> {
       animation: isSelected,
       builder: (context, _) {
         return CheckboxListTile(
-          tristate: true,
+          tristate: widget.triState,
           title: widget.title != null
               ? Text(
                   widget.title!,
@@ -54,7 +58,8 @@ class _WiserChecBoxListTileState extends State<WiserChecBoxListTile> {
           contentPadding: EdgeInsets.zero,
           activeColor: context.tokens.color.primaryMain,
           checkColor: context.tokens.color.neutralShade,
-          visualDensity: VisualDensity.compact,
+          visualDensity:
+              widget.compact ? VisualDensity.compact : VisualDensity.standard,
           enabled: true,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(

@@ -12,5 +12,5 @@ extension SpacingExtension on EdgeInsets {
   EdgeInsets get t => EdgeInsets.only(top: value);
 
   Widget get verticalGap => SizedBox(height: value );
-  Widget get horizontal => SizedBox(width: value );
+  Widget get horizontalGap => SizedBox(width: value );
 }

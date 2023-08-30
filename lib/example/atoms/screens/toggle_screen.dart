@@ -1,16 +1,15 @@
-import 'package:cwi_wiser/core/theme/wiser_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:wiser/wiser.dart';
 
-class ToogleScreen extends StatelessWidget {
-  static const String routeName = '/toogle';
-  const ToogleScreen({super.key});
+class ToggleScreen extends StatelessWidget {
+  static const String routeName = '/toggle';
+  const ToggleScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Toogle'),
+        title: const Text('Toggle'),
         backgroundColor: context.tokens.color.neutralShade,
         elevation: 0,
       ),
@@ -26,11 +25,6 @@ class ToogleScreen extends StatelessWidget {
               WiserToggle(
                 initialValue: true,
                 onChanged: (value) {},
-              ),
-              WiserChecBoxListTile(
-                currentValue: false,
-                onChanged: (value) {},
-                title: 'Label text',
               ),
             ],
           ),

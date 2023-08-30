@@ -1,7 +1,7 @@
 import 'package:wiser/tokens/tokens.g.dart';
 
-class CustomTokens {
-  CustomTokens._privateConstructor();
+class WiserTokens {
+  WiserTokens._privateConstructor();
 
   static DefaultColorTokens colors = DefaultColorTokens();
   static DefaultSpacingTokens spacing = DefaultSpacingTokens();

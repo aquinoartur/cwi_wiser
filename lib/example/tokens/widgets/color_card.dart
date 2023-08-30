@@ -1,7 +1,6 @@
 import 'package:cwi_wiser/core/helper/color_helper.dart';
-import 'package:cwi_wiser/core/theme/wiser_theme.dart';
-import 'package:wiser/tokens/tokens.g.dart';
 import 'package:flutter/material.dart';
+import 'package:wiser/wiser.dart';
 
 class ColorCard extends StatelessWidget {
   final Color color;
@@ -54,7 +53,7 @@ class ColorCard extends StatelessWidget {
 
   Widget labelText({required String label, required String value}) {
     return Padding(
-      padding: Wiser.spacing.spacingXxSmall,
+      padding: WiserTokens.spacing.spacingXxSmall,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

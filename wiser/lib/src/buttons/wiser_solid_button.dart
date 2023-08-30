@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wiser/wiser.dart';
 
-import '../../tokens/tokens.dart';
-
-class WiserButton extends StatelessWidget {
+class WiserSolidButton extends StatelessWidget {
   final String label;
   final Color buttonColor;
   final Color labelColor;
@@ -11,54 +9,54 @@ class WiserButton extends StatelessWidget {
   final double? width;
   final double? height;
   final bool isLoading;
-  final bool withIcon;
+  final IconData? icon;
   final bool isDisabled;
   final Color spinnerColor;
   final EdgeInsetsGeometry? margin;
 
-  WiserButton.solidPrimary({
+  WiserSolidButton.primary({
     Key? key,
     required this.label,
     required this.onPressed,
     this.margin,
     this.isLoading = false,
     this.isDisabled = false,
-    this.withIcon = true,
+    this.icon,
     this.width,
     this.height,
-  })  : buttonColor = CustomTokens.colors.primaryMain,
-        labelColor = CustomTokens.colors.neutralShade,
-        spinnerColor = CustomTokens.colors.neutralXtint,
+  })  : buttonColor = WiserTokens.colors.primaryMain,
+        labelColor = WiserTokens.colors.neutralShade,
+        spinnerColor = WiserTokens.colors.neutralXtint,
         super(key: key);
 
-  WiserButton.solidSecondary({
+  WiserSolidButton.secondary({
     Key? key,
     required this.label,
     required this.onPressed,
     this.margin,
     this.isLoading = false,
     this.isDisabled = false,
-    this.withIcon = true,
+    this.icon,
     this.width,
     this.height,
-  })  : buttonColor = CustomTokens.colors.neutralShade,
-        labelColor = CustomTokens.colors.primaryMain,
-        spinnerColor = CustomTokens.colors.neutralXtint,
+  })  : buttonColor = WiserTokens.colors.neutralShade,
+        labelColor = WiserTokens.colors.primaryMain,
+        spinnerColor = WiserTokens.colors.neutralXtint,
         super(key: key);
 
-  WiserButton.solidTertiary({
+  WiserSolidButton.tertiary({
     Key? key,
     required this.label,
     required this.onPressed,
     this.margin,
     this.isLoading = false,
     this.isDisabled = false,
-    this.withIcon = true,
+    this.icon,
     this.width,
     this.height,
-  })  : buttonColor = CustomTokens.colors.neutralMain,
-        labelColor = CustomTokens.colors.neutralTint,
-        spinnerColor = CustomTokens.colors.neutralShade,
+  })  : buttonColor = WiserTokens.colors.neutralMain,
+        labelColor = WiserTokens.colors.neutralTint,
+        spinnerColor = WiserTokens.colors.neutralShade,
         super(key: key);
 
   @override
@@ -87,16 +85,15 @@ class WiserButton extends StatelessWidget {
               child: Builder(
                 builder: (context) {
                   if (isLoading && !isDisabled) {
-                    return Container(
-                      height:
-                          height ?? context.tokens.spacing.spacingLarge.value,
-                      width:
-                          height ?? context.tokens.spacing.spacingLarge.value,
-                      padding: EdgeInsets.symmetric(
-                        vertical: context.tokens.spacing.spacingSmall.value,
-                        horizontal: context.tokens.spacing.spacingXBig.value,
+                    return SizedBox(
+                      height: height ?? context.tokens.spacing.spacingBig.value,
+                      width: height ?? context.tokens.spacing.spacingBig.value,
+                      child: Center(
+                        child: CircularProgressIndicator(
+                          valueColor: AlwaysStoppedAnimation(spinnerColor),
+                          strokeWidth: 3.0,
+                        ),
                       ),
-                      child: CircularProgressIndicator(color: spinnerColor),
                     );
                   }
                   return Row(
@@ -105,16 +102,16 @@ class WiserButton extends StatelessWidget {
                       Text(
                         label,
                         textAlign: TextAlign.center,
-                        style: CustomTokens.text.paragraph.copyWith(
+                        style: WiserTokens.text.paragraph.copyWith(
                           color: labelColor,
                         ),
                       ),
-                      if (withIcon) ...{
+                      if (icon != null) ...{
                         SizedBox(
                           width: context.tokens.spacing.spacingXSmall.value,
                         ),
                         Icon(
-                          Icons.check,
+                          icon,
                           color: labelColor,
                         ),
                       },
