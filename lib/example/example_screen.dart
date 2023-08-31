@@ -35,7 +35,10 @@ class _ExampleScreenState extends State<ExampleScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Wiser Design System'),
+        title: Text(
+          'Wiser Design System',
+          style: context.tokens.textStyle.heading4,
+        ),
         backgroundColor: context.tokens.color.neutralShade,
         elevation: 0,
       ),
@@ -50,6 +53,9 @@ class _ExampleScreenState extends State<ExampleScreen>
                 indicatorWeight: 3.0,
                 isScrollable: true,
                 indicatorColor: context.tokens.color.primaryMain,
+                labelStyle: context.tokens.textStyle.paragraph.copyWith(
+                  fontSize: 11.5,
+                ),
                 tabs: const [
                   Tab(height: 40, text: 'Átomos'),
                   Tab(height: 40, text: 'Moléculas'),

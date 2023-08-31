@@ -62,7 +62,7 @@ class _ButtonScreenState extends State<ButtonScreen> {
               WiserUnderlineButton(
                 label: 'Texto do botão',
                 labelColor: context.tokens.color.dangerMain,
-                onPressed: () {},
+                onPressed: showSnack,
               ),
               WiserUnderlineButton(
                 label: 'Texto do botão',

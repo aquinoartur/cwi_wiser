@@ -12,6 +12,7 @@ class AtomsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextStyle textStyle = context.tokens.textStyle.paragraph;
     return ListView(
       shrinkWrap: true,
       padding: context.tokens.spacing.spacingBig,
@@ -33,36 +34,54 @@ class AtomsScreen extends StatelessWidget {
                   context,
                   ButtonScreen.routeName,
                 ),
-                child: const Text('Botões'),
+                child: Text(
+                  'Botões',
+                  style: textStyle,
+                ),
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: const Text('Ícones'),
+                child: Text(
+                  'Ícones',
+                  style: textStyle,
+                ),
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: const Text('Pills'),
+                child: Text(
+                  'Pills',
+                  style: textStyle,
+                ),
               ),
               ElevatedButton(
                 onPressed: () => Navigator.pushNamed(
                   context,
                   CheckboxScreen.routeName,
                 ),
-                child: const Text('Checkbox'),
+                child: Text(
+                  'Checkbox',
+                  style: textStyle,
+                ),
               ),
               ElevatedButton(
                 onPressed: () => Navigator.pushNamed(
                   context,
                   ToggleScreen.routeName,
                 ),
-                child: const Text('Toggle'),
+                child: Text(
+                  'Toggle',
+                  style: textStyle,
+                ),
               ),
               ElevatedButton(
                 onPressed: () => Navigator.pushNamed(
                   context,
                   FieldsScreen.routeName,
                 ),
-                child: const Text('Fields'),
+                child: Text(
+                  'Fields',
+                  style: textStyle,
+                ),
               ),
             ],
           ),
