@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:wiser/wiser.dart';
 
-class WiserChecBoxListTile extends StatefulWidget {
+class WiserCheckBox extends StatefulWidget {
   final bool? currentValue;
   final Function(bool?) onChanged;
   final String? title;
   final bool compact;
   final bool triState;
 
-  const WiserChecBoxListTile({
+  const WiserCheckBox({
     Key? key,
     required this.currentValue,
     required this.onChanged,
@@ -18,10 +18,10 @@ class WiserChecBoxListTile extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<WiserChecBoxListTile> createState() => _WiserChecBoxListTileState();
+  State<WiserCheckBox> createState() => _WiserCheckBoxState();
 }
 
-class _WiserChecBoxListTileState extends State<WiserChecBoxListTile> {
+class _WiserCheckBoxState extends State<WiserCheckBox> {
   late final ValueNotifier<bool?> isSelected;
 
   @override

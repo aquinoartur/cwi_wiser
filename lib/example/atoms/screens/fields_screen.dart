@@ -35,7 +35,7 @@ class _FieldsScreenState extends State<FieldsScreen> {
               builder: (context, child) {
                 return Column(
                   children: [
-                    WiserField(
+                    WiserFormField(
                       hint: 'Wiser Form Field',
                       labelText: 'Label',
                       helperText: 'Description Text',
@@ -46,7 +46,7 @@ class _FieldsScreenState extends State<FieldsScreen> {
                       ),
                     ),
                     WiserTokens.spacing.spacingLarge.verticalGap,
-                    WiserField(
+                    WiserFormField(
                       hint: 'Wiser Form Field',
                       labelText: 'Label',
                       helperText: 'Description Text',
@@ -56,7 +56,7 @@ class _FieldsScreenState extends State<FieldsScreen> {
                       ),
                     ),
                     WiserTokens.spacing.spacingLarge.verticalGap,
-                    WiserField(
+                    WiserFormField(
                       hint: 'Wiser Form Field',
                       labelText: 'Label',
                       helperText: 'Description Text',
@@ -67,7 +67,7 @@ class _FieldsScreenState extends State<FieldsScreen> {
                       ),
                     ),
                     WiserTokens.spacing.spacingLarge.verticalGap,
-                    WiserField(
+                    WiserFormField(
                       hint: 'Wiser Form Field',
                       labelText: 'Digite sua senha',
                       helperText: 'Digite ao menos 5 caracteres',

@@ -50,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
               AnimatedBuilder(
                   animation: _emailcontroller,
                   builder: (context, _) {
-                    return WiserField(
+                    return WiserFormField(
                       hint: 'fulano.beltrano@cwi.com.br',
                       labelText: 'E-mail',
                       controller: _emailcontroller,
@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
               AnimatedBuilder(
                 animation: _passwordcontroller,
                 builder: (context, _) {
-                  return WiserField(
+                  return WiserFormField(
                     hint: '12345',
                     labelText: 'Senha',
                     helperText: 'Digite pelo menos 5 caracteres',

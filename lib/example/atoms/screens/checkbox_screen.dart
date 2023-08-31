@@ -18,30 +18,30 @@ class CheckboxScreen extends StatelessWidget {
           padding: context.tokens.spacing.spacingBig,
           child: Column(
             children: [
-              WiserChecBoxListTile(
+              WiserCheckBox(
                 currentValue: false,
                 onChanged: (value) {},
                 title: 'Label text',
               ),
-              WiserChecBoxListTile(
+              WiserCheckBox(
                 currentValue: true,
                 onChanged: (value) {},
                 title: 'Label text',
               ),
-              WiserChecBoxListTile(
+              WiserCheckBox(
                 currentValue: null,
                 onChanged: (value) {},
                 title: 'Label text',
               ),
               const Divider(),
-              WiserChecBoxListTile(
+              WiserCheckBox(
                 currentValue: false,
                 onChanged: (value) {},
                 compact: false,
                 title: 'Label text',
                 triState: false,
               ),
-              WiserChecBoxListTile(
+              WiserCheckBox(
                 currentValue: true,
                 onChanged: (value) {},
                 title: 'Label text',

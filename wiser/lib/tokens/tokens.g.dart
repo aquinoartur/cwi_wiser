@@ -93,7 +93,7 @@ class DefaultColorTokens extends ColorTokens {
   @override
   Color get primaryShade => const Color(0xFFEA8D00);
   @override
-  Color get primaryMain => const Color(0xFFF9B041);
+  Color get primaryMain => const Color(0xFFFA41CF);
   @override
   Color get primaryTint => const Color(0xFFFDCA7B);
   @override

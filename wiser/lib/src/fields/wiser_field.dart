@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wiser/wiser.dart';
 
-class WiserField extends StatefulWidget {
+class WiserFormField extends StatefulWidget {
   final double? width;
   final int? maxLength;
   final bool? readOnly;
@@ -60,7 +60,7 @@ class WiserField extends StatefulWidget {
   final bool? expands;
   final List<TextInputFormatter>? inputFormatters;
 
-  const WiserField({
+  const WiserFormField({
     Key? key,
     this.minHeight,
     this.maxHeight,
@@ -121,10 +121,10 @@ class WiserField extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _WiserFieldState createState() => _WiserFieldState();
+  _WiserFormFieldState createState() => _WiserFormFieldState();
 }
 
-class _WiserFieldState extends State<WiserField> {
+class _WiserFormFieldState extends State<WiserFormField> {
   @override
   Widget build(BuildContext context) {
     return Column(
